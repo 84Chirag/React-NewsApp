@@ -1,0 +1,33 @@
+.mob {
+    display: "flex";
+    flex-direction: "row";
+}
+
+.card1 {
+    margin-bottom: 1.5rem;
+    margin-top: 1rem;
+    margin-right: 3rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, .125);
+    border-radius: 0.25rem;
+}
+
+@media only screen and (max-width: 393px) {
+    .mob {
+        display: block !important;
+    }
+
+    .card1 {
+        margin-left: 1.9rem !important;
+        margin-right: 0;
+    }
+}
+.img-load{
+    width: 90px;
+}
