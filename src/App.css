@@ -17,7 +17,7 @@
     word-wrap: break-word;
     /* background-color: #fff; */
     -webkit-background-clip: border-box;
-    border: 1px solid rgba(0, 0, 0, .125);
+    border: 1px solid #ffc1077a;
     border-radius: 0.25rem;
 }
 
