@@ -1,33 +1,87 @@
-.mob {
-    display: "flex";
-    flex-direction: "row";
+.App {
+  text-align: center;
 }
 
-.card1 {
-    margin-bottom: 1.5rem;
-    margin-top: 1rem;
-    margin-right: 3rem;
-    position: relative;
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.card1{
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 5px;
+  width: 18rem;
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  /* background-color: #fff; */
+  background-clip: border-box;
+  border: 1px solid rgba(0,0,0,.125);
+  border-radius: 0.25rem;
+}
+
+@media screen and (min-width:393px) and (max-width:394px) {
+  .container{
     display: flex;
     flex-direction: column;
-    min-width: 0;
-    word-wrap: break-word;
-    background-color: #fff;
-    background-clip: border-box;
-    border: 1px solid rgba(0, 0, 0, .125);
-    border-radius: 0.25rem;
+    align-items: center;
+    justify-content: center;
+  }
+  .card{
+    margin-bottom: 25px;
+  }
 }
-
-@media only screen and (max-width: 393px) {
-    .mob {
-        display: block !important;
-    }
-
-    .card1 {
-        margin-left: 1.9rem !important;
-        margin-right: 0;
-    }
+.box{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15%;
 }
-.img-load{
-    width: 90px;
+.btn5{
+  background-color: yellow;
+  border-radius: 100px;
+  width: 30px;
+  height: 30px;
+  margin-right: 15px;
+}
+.btn5:hover:active{
+  box-shadow: 0 0 0 0.2rem rgb(255, 85, 0) !important;
+}
+.btn5:focus{
+  box-shadow: none !important;
 }

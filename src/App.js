@@ -1,34 +1,46 @@
 import './App.css';
-import React, { Component } from 'react'
 import Navbar from './components/Navbar';
-import News from './components/News';
+import Container from './components/Container';
+  import Contact from './components/Contact';
+  import React, { useState } from 'react'
 import {
   BrowserRouter as Router,
   Routes,//version updated to ver 6 Switch has been changed to Routes
   Route
 } from "react-router-dom";
 
-export default class App extends Component {
-  apikey = process.env.REACT_APP_NEWS_API
-  render() {
-    return (
-      <div>
-        <Router>
-          <Navbar />
-          <Routes>
-            <Route exact path='/general' element={<News key="general" pageSize={5} country="in" category="general" apikey={this.apikey} />} />
-            <Route exact path='/business' element={<News key="business" pageSize={5} country="in" category="business" apikey={this.apikey} />} />
-            <Route exact path='/entertainment' element={<News key="entertainment" pageSize={5} country="in" category="entertainment" apikey={this.apikey} />} />
-            <Route exact path='/health' element={<News key="health" pageSize={5} country="in" category="health" apikey={this.apikey} />} />
-            <Route exact path='/science' element={<News key="science" pageSize={5} country="in" category="science" apikey={this.apikey} />} />
-            <Route exact path='/sports' element={<News key="sports" pageSize={5} country="in" category="sports" apikey={this.apikey} />} />
-            <Route exact path='/technology' element={<News key="technology" pageSize={5} country="in" category="technology" apikey={this.apikey} />} />
-          </Routes>
-        </Router>
 
 
-      </div>
-    )
+
+function App() {
+  //this is condition written for theme toggle which we can pass to funtional or class components as 'props'.
+  //props means properties which is used to pass data to from this parent component to other component
+  const [mode, setmode] = useState('light');
+  const togglemode = () => {
+    if (mode === 'light') {
+      setmode('dark');
+      document.body.style.backgroundColor = "black";
+      document.body.style.color = "white";
+    }
+    else {
+      setmode('light');
+      document.body.style.backgroundColor = "white";
+      document.body.style.color = "black";
+    }
   }
+  return (
+    <>
+      <Router>
+        <Navbar mode={mode} togglemode={togglemode} />
+        <div className='container'>
+          <Routes> {/* changed from Switch to Routes*/}
+            <Route exact path="/contact" element={<Contact mode={mode} togglemode={togglemode} />} />
+            <Route exact path="/" element={<Container mode={mode} togglemode={togglemode} />} />
+          </Routes>
+        </div>
+      </Router>
+    </>
+  );
 }
 
+export default App;
