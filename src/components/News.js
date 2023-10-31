@@ -22,7 +22,7 @@ const News = (props) => {
       document.body.style.color = "black";
     }
   }
-    
+  
 
 
     const updateNews = async () => {
