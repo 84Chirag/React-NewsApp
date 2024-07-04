@@ -22,7 +22,7 @@ const App = () => {
       document.body.style.color = "black";
     }
   }
-  const apikey = process.env.REACT_APP_NEWS_API
+  const apikey = process.env.REACT_APP_NEWS_API;
   return (
     <div>
       <Router>

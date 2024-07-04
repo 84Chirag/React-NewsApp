@@ -50,7 +50,7 @@ const News = (props) => {
     return (
 
         <div className={`container mt-5 ${props.mode}`}>
-            <h1 className='text-center' style={{marginTop: '80px'}}>Pug News - Top {(props.category)} Healines</h1>
+            <h1 className='text-center' style={{marginTop: '80px'}}>Hot News - Top {(props.category)} Healines</h1>
             {loading && <Loading  />}
             <InfiniteScroll
                 dataLength={articles.length} //This is important field to render the next data

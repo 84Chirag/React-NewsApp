@@ -84,3 +84,11 @@
     background: transparent !important;
     border-radius: 100px;
 }
+
+.screenup{
+    display: none;
+    position: fixed;
+    bottom: 3%;
+    right: 2%;
+    cursor: pointer;
+}

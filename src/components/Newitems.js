@@ -9,7 +9,7 @@ const Newitems = (props) => {
             <div className={`card-body ${props.mode}`}>
                 <h5 className={`card-title ${props.mode}`}>{title}</h5>
                 <p className={`card-text ${props.mode}`}>{description}</p>
-                <a href={newsdeatil} target='_blank' rel='noreferrer' className="btn btn-sm btn-primary">Go somewhere</a>
+                <a href={newsdeatil} target='_blank' rel='noreferrer' className="btn btn-sm btn-primary">More Detail</a>
             </div>
         </div>
     )
