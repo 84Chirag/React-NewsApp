@@ -20,7 +20,7 @@ The application fetches news data from the Google News API using asynchronous Ja
 
 ## Screenshots
 
-![Hot News App Screenshot]('/src/components/hotnews.png')
+![Hot News App Screenshot]('./src/components/hotnews.png')
 
 ## Installation
 
